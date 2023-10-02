@@ -1,0 +1,4 @@
+C:\Riot Games\Riot Client\RiotClientServices.exe
+C:\Program Files\Proton\VPN\ProtonVPN.Launcher.exe
+C:\NIKKE\Launcher\nikke_launcher.exe
+C:\Users\User\Desktop\The games\중요문서.txt

@@ -1,0 +1,31 @@
+<Window x:Class="editWindow.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:editWindow"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center">
+            <Button  Name="CheckButton" Click="CheckButtonClick" Width="100" Height="30" Margin="10">추가</Button>
+            <Button  Name="CancleButton" Click="CancleButtonClick" Width="100" Height="30" Margin="10">취소</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center">
+            <TextBox IsReadOnly="True" BorderThickness="0" Margin="3 0 0 0">이름 입력</TextBox>
+            <TextBox Name="InputName" Margin="3 3 0 0"></TextBox>
+            <TextBox Name="Block" Height="30" BorderThickness="0" IsReadOnly="True"></TextBox>
+            <TextBox IsReadOnly="True" BorderThickness="0" Margin="3 0 0 0">경로</TextBox>
+            <TextBox Name="InputPath" IsEnabled="False" Margin="3 3 0 0"></TextBox>
+            <Button  Name="FindFile" Click="FindFileClick" Width="100" Height="30" Margin="10" HorizontalAlignment="Right">파일 찾기</Button>
+        </StackPanel>
+    </Grid>
+</Window>
