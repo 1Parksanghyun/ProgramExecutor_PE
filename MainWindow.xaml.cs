@@ -61,7 +61,7 @@ namespace mainWindow
             System.Diagnostics.Process ep = new System.Diagnostics.Process();
 
             op.FileName = "cmd.exe";
-            op.CreateNoWindow = false;
+            op.CreateNoWindow = true;
             op.UseShellExecute = false;
             op.RedirectStandardInput = true;
             op.RedirectStandardOutput = true;
@@ -77,9 +77,13 @@ namespace mainWindow
                 ep.WaitForExit(1500);
 
             }
-            catch (System.Exception)
+            catch (System.ArgumentOutOfRangeException)
             {
-
+                System.Windows.MessageBox.Show("파일을 선택해주세요");
+            }
+            catch (System.Exception err)
+            {
+                System.Windows.MessageBox.Show(err.ToString());
                 throw;
             }
             ep.Kill();

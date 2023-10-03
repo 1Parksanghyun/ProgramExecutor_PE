@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oV4Moky0U1p2Py9+/OMOUmyPwKLjapmQaian37IpOOxx4qnqRwOyZsZGnRHkQGdRqE2KVX3lys9FoAD1BKvZIg==",
+  "dgSpecHash": "u3KwFxvNzg8/k+Mgle2//2ob1eHiyAwXmTJQz9MQ4a+U8fNeDXDy7HfzOSAlKK8cTIxDuclkezguLzulcFo8bQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProjectFile.csproj",
+  "projectFilePath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProgramExecutor_PE\\ProjectFile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

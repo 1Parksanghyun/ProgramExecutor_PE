@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProjectFile.csproj",
+      "projectUniqueName": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProgramExecutor_PE\\ProjectFile.csproj",
       "projectName": "ProjectFile",
-      "projectPath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProjectFile.csproj",
+      "projectPath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProgramExecutor_PE\\ProjectFile.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\obj\\",
+      "outputPath": "C:\\Users\\User\\test_c_c++\\NETprogram\\ProjectFile\\ProgramExecutor_PE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
