@@ -18,6 +18,7 @@ namespace editWindow
 {
     public partial class EditWindow : Window
     {
+        // 메인메뉴 Class
         mainWindow.MainWindow MW1;
 
         public EditWindow(mainWindow.MainWindow MW)
@@ -25,8 +26,11 @@ namespace editWindow
             InitializeComponent();
 
             MW1 = MW;
+            InputName.Text = "(이름없음)";
+            InputPath.Text = "(경로없음)";
         }
 
+        // 파일 찾기 버튼
         private void FindFileClick(object sender, RoutedEventArgs e)
         {
             using (OpenFileDialog NewFile = new OpenFileDialog())
@@ -36,15 +40,19 @@ namespace editWindow
             }
         }
 
+        // 확인 버튼
         private void CheckButtonClick(object sender, RoutedEventArgs e)
         {
             MW1.NamePlace.Items.Add(InputName.Text);
             MW1.PathPlace.Items.Add(InputPath.Text);
             this.Close();
         }
-        private void CancleButtonClick(object sender, RoutedEventArgs e)
-        {
 
+        // 취소 버튼
+        private void CancleButtonClick(object sender, RoutedEventArgs e)
+
+        {
+            this.Close();
         }
 
     }
