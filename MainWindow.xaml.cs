@@ -23,15 +23,20 @@ namespace mainWindow
     /// 
     public partial class MainWindow : Window
     {
-
+        public class Data
+        {
+            public string name { get; set; }
+            public string path { get; set; }
+        }
         private string DataPath = @"C:\Users\User\test_c_c++\NETprogram\ProjectFile/ProgramExecutor_PE\Data";
         public MainWindow()
         {
+            List<Data> listdata = new List<Data>();
             InitializeComponent();
             //데이터 불러오기
             try
             {
-                using (var sr = new System.IO.StreamReader(DataPath + @"\NameData.txt"))
+                /*using (var sr = new System.IO.StreamReader(DataPath + @"\NameData.txt"))
                 {
                     while (sr.Peek() != -1)
                     {
@@ -45,7 +50,20 @@ namespace mainWindow
                     {
                         PathPlace.Items.Add(sr.ReadLine());
                     }
+                }*/
+
+                var NameSR = new System.IO.StreamReader(DataPath + @"\NameData.txt");
+                var PathSR = new System.IO.StreamReader(DataPath + @"\PathData.txt");
+
+                while (NameSR.Peek() != -1)
+                {
+                    listdata.Add(new Data() { name = NameSR.ReadLine(), path = PathSR.ReadLine() });
                 }
+
+                NameSR.Close();
+                PathSR.Close();
+
+                DataList.ItemsSource = listdata;
             }
             catch (System.Exception err)
             {
