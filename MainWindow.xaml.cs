@@ -23,6 +23,7 @@ namespace mainWindow
     /// 
     public partial class MainWindow : Window
     {
+        List<Data> listdata = new List<Data>();
         public class Data
         {
             public string name { get; set; }
@@ -31,11 +32,11 @@ namespace mainWindow
         private string DataPath = @"C:\Users\User\test_c_c++\NETprogram\ProjectFile/ProgramExecutor_PE\Data";
         public MainWindow()
         {
-            List<Data> listdata = new List<Data>();
             InitializeComponent();
             //데이터 불러오기
             try
             {
+                //구버전 불러오기방식 제거예정
                 /*using (var sr = new System.IO.StreamReader(DataPath + @"\NameData.txt"))
                 {
                     while (sr.Peek() != -1)
@@ -92,8 +93,8 @@ namespace mainWindow
             try
             {
                 // 실행
-                int INdex = NamePlace.SelectedIndex;
-                ep.StandardInput.WriteLine(@"explorer " + PathPlace.Items[INdex].ToString());
+                int INdex = DataList.SelectedIndex;
+                ep.StandardInput.WriteLine(@"explorer " + listdata[INdex].path);
                 ep.WaitForExit(1500);
 
             }
